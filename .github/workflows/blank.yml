@@ -40,11 +40,7 @@ jobs:
 
     steps:
        - name: Hello world action
-         env: # Set the secret as an input
-           super_secret: ${{ secrets.TEST_ENV }}
          run: |
-            echo "$super_secret"
-       - name: Dependant is Running
-         run: |
-            echo "Completed job 2, but triggering failure"
-        
+            ls 
+            pwd
+       
