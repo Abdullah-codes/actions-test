@@ -13,9 +13,11 @@ jobs:
     - name: aws access
       env: # Set the secret as an input
            accsess_secret: ${{ secrets.ACCESS_KEY }}
+      run: |     
     - name: aws secret
       env: # set secret
            secret_secret: ${{ secrets.SECRET_KEY }}
+      run: |     
     - name: export aws cred
       run: |
          export AWS_ACCESS_KEY_ID=$accsess_secret
