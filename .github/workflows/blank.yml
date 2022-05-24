@@ -36,6 +36,7 @@ jobs:
           echo "hello from container"
           echo "helowwwwww"
           ls
+          chmod +x bash-script.sh
           ./bash-script.sh 
           cat README.md
           pwd
