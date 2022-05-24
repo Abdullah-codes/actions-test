@@ -36,4 +36,5 @@ jobs:
           echo "hello from container"
           echo "helowwwwww"
           ls
+          cat README.md
           pwd
