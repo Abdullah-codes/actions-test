@@ -35,3 +35,5 @@ jobs:
         run: |
           echo "hello from container"
           echo "helowwwwww"
+          ls
+          pwd
