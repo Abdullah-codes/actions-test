@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: hashicorp/setup-terraform@v2
+      with:
+         terraform_version: 1.1.7
     - name: Sleep and Run
       run: |
-        sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
-        curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
-        sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-        sudo apt-get update && sudo apt-get install terraform
-        terraform version
+         terrform verion
+        
 
   job2:
     name: Job 2
