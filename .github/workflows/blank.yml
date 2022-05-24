@@ -13,7 +13,11 @@ jobs:
     - name: aws access
       env: # Set the secret as an input
            accsess_secret: ${{ secrets.ACCESS_KEY }}
-      run: |     
+      run: |
+         ls -al
+         ls
+         pwd
+         echo "is there anything ?"
     - name: aws secret
       env: # set secret
            secret_secret: ${{ secrets.SECRET_KEY }}
