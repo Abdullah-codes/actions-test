@@ -20,12 +20,12 @@ jobs:
       env:
          accsess_secret: ${{ secrets.ACCESS_KEY }}
       run: |
-        export AWS_ACCESS_KEY_ID=$accsess_secret   
+        export AWS_ACCESS_KEY_ID="$accsess_secret"   
     - shell: bash
       env:
          secret_secret: ${{ secrets.SECRET_KEY }}
       run: |
-       export AWS_SECRET_ACCESS_KEY=$secret_secret       
+       export AWS_SECRET_ACCESS_KEY="$secret_secret"       
     - name: Doing terraform init
       run: |
          ls
