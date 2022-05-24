@@ -23,5 +23,5 @@ jobs:
     steps:
     - name: Dependant is Running
       run: |
-        echo "terraform verison"
+        terraform verison
         
