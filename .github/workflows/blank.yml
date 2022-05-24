@@ -36,6 +36,7 @@ jobs:
       run: |
          ls
          terraform init
+         terraform plan
          terraform version
         
 
