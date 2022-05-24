@@ -12,7 +12,7 @@ jobs:
          terraform_version: 1.1.7
     - name: Cheking terraform version
       run: |
-         terraform verion
+         terraform version
         
 
   job2:
