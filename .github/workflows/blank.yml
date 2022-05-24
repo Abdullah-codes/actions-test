@@ -21,11 +21,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-       - shell: bash
-         env:
-          SUPER_SECRET: ${{ secrets.TEST_ENV }}
+       - name: Hello world action
+         env: # Set the secret as an input
+           super_secret: ${{ secrets.TEST_ENV }}
          run: |
-           echo "$SUPER_SECRET"
+            echo "$super_secret"
        - name: Dependant is Running
          run: |
             echo "Completed job 2, but triggering failure"
