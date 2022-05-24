@@ -9,8 +9,11 @@ jobs:
     steps:
     - name: Sleep and Run
       run: |
-        echo "Sleeping for 10"
-        sleep 10
+        sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+        curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+        sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+        sudo apt-get update && sudo apt-get install terraform
+        terraform version
 
   job2:
     name: Job 2
@@ -20,15 +23,5 @@ jobs:
     steps:
     - name: Dependant is Running
       run: |
-        echo "Completed job 2, but triggering failure"
-        exit 1
-
-  job3:
-    name: Job 3
-    needs: job2
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Will never run
-      run: |
-        echo "If you can read this, the experiment failed"
+        echo "terraform verison"
+        
