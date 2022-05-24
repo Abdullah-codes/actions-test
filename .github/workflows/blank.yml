@@ -21,7 +21,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checking terraform with in job2
-      run: |
-        terraform version
+       - shell: bash
+         env:
+          SUPER_SECRET: ${{ secrets.TEST_ENV }}
+         run: |
+           echo "$SUPER_SECRET"
+       - name: Dependant is Running
+         run: |
+            echo "Completed job 2, but triggering failure"
         
