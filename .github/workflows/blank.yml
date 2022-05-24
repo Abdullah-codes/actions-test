@@ -13,7 +13,6 @@ jobs:
         ls 
         pwd
         echo "hi"
-    - name: configure aws
     - shell: bash
       env:
          accsess_secret: ${{ secrets.ACCESS_KEY }}
