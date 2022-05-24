@@ -10,9 +10,9 @@ jobs:
     - uses: hashicorp/setup-terraform@v2
       with:
          terraform_version: 1.1.7
-    - name: Sleep and Run
+    - name: Cheking terraform version
       run: |
-         terrform verion
+         terraform verion
         
 
   job2:
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Dependant is Running
+    - name: Checking terraform with in job2
       run: |
         terraform version
         
