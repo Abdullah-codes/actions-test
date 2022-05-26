@@ -68,6 +68,7 @@ jobs:
            cd
            pwd
            ls
-           tar -cvf whole_repo.tar
+           mkdir unzip_repo
+           tar -cvf whole_repo.tar unzip_repo
            ls
            pwd
