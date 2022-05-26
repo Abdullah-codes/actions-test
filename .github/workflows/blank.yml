@@ -73,5 +73,6 @@ jobs:
            ls
            tar -xvf whole_repo.tar -C ~/unzip_repo
            cd unzip_repo
+           echo "inside the unzip repo"
            ls
            pwd
