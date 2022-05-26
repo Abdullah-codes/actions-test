@@ -55,12 +55,8 @@ jobs:
        - uses: actions/download-artifact@v3
          with:
            name: from_job_one
+           path: ~/
        - name: Hello world action
          run: |
-            ls 
-            pwd
-            tar -xvf whole_repo.tar
-            ls
-            pwd
-            cd home/runner/work/actions-test/actions-test/
+            cd
             ls
