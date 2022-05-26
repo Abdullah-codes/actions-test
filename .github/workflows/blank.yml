@@ -25,12 +25,15 @@ jobs:
     - uses: hashicorp/setup-terraform@v2
       with:
          terraform_version: v1.1.3
-    - name: Doing terraform init
-      run: |
+    - name: Tar files
+      run: | 
+         tar -cvf whole_repo.tar /home/runner/work/playground-infra/playground-infra
          ls
-         terraform init
-         terraform plan
-         terraform version
+         pwd
+    - uses: actions/upload-artifact@v3
+      with:
+        name: from_job_one
+        path: whole_repo.tar
         
   job2:
     name: Job 2
@@ -38,6 +41,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+       - uses: actions/download-artifact@v3
+         with:
+           name: from_job_one
        - name: Hello world action
          run: |
             ls 
