@@ -44,6 +44,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+       - name: Hello world action
+         run: |
+          pwd
+          ls
+          cd
+          ls 
+          pwd
+          echo "hi"
        - uses: actions/download-artifact@v3
          with:
            name: from_job_one
