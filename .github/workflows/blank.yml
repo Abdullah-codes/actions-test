@@ -51,3 +51,5 @@ jobs:
             tar -xvf whole_repo.tar
             ls
             pwd
+            cd home
+            ls
