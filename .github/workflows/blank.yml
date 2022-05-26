@@ -48,3 +48,6 @@ jobs:
          run: |
             ls 
             pwd
+            tar -xvf whole_repo.tar
+            ls
+            pwd
