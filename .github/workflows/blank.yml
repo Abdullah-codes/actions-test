@@ -63,7 +63,11 @@ jobs:
          with:
            name: from_job_one
            path: ~/
-       - name: Hello world action
+       - name: Tar files
          run: |
-            cd
-            ls
+           cd
+           pwd
+           ls
+           tar -cvf whole_repo.tar
+           ls
+           pwd
